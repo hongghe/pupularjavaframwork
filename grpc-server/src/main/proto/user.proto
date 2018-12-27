@@ -1,0 +1,21 @@
+syntax = "proto3";
+package com.hongghe.protobuf.grpcserver.user;
+option java_package = "com.hongghe.protobuf.grpcserver.bobby";
+option java_outer_classname = "UserProto";
+option java_multiple_files = true;
+
+message User {
+    reserved "Person";// 保留标识符
+    string firstName = 1;
+    string lastName = 2;
+    string emailAddress = 3;
+    string homeAddress = 4;
+    repeated Skill skills =6;
+    enum Skill {
+        GOLANG = 0;
+        PYTHON = 1;
+        JAVA = 2;
+        RUST = 3;
+        CPP = 4;
+    }
+}

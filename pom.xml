@@ -23,7 +23,7 @@
 		<module>memcached</module>
 		<module>mongodb</module>
 		<module>rabbitmq</module>
-		<module>grpcproto</module>
+		<module>grpc-server</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
