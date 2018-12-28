@@ -1,5 +1,6 @@
 package com.hongghe.redis.controller;
 
+import com.hongghe.redis.annotations.ForceLogin;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ErrorController {
 
     @RequestMapping(value = "500")
+    @ForceLogin
     public String ServerError() {
         return "500";
     }
@@ -21,4 +23,5 @@ public class ErrorController {
     public String NotFoundError() {
         return "404";
     }
+
 }

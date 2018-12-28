@@ -1,5 +1,6 @@
 package com.hongghe.redis;
 
+import com.hongghe.redis.domain.RedisSettingProperties;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -9,4 +10,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Data
 @ConfigurationProperties(prefix = "redisdemo")
 public class RedisProperties {
+
+    private final RedisSettingProperties redisSettingProperties = new RedisSettingProperties();
 }
