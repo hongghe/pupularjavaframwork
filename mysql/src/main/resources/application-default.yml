@@ -6,3 +6,9 @@ spring:
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&useSSL=false&createDatabaseIfNotExist=true
     username: root
     password:
+mysqldemo:
+  swagger:
+    basePackage: com.hongghe.mongodb.controller
+    title: 用户服务
+    description: 用户基本增删改查
+    version: V1.0
