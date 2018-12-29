@@ -1,14 +1,16 @@
 package com.hongghe.rabbitmq;
 
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 /**
  *  启动类
+ *
+ *  @author hongghe
  */
-//@EnableApolloConfig
+@EnableRabbit
 @SpringBootApplication
 public class RabbitmqApplication {
 
