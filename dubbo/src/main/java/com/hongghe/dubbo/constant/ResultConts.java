@@ -1,4 +1,4 @@
-package com.hongghe.dubbo.constants;
+package com.hongghe.dubbo.constant;
 
 /**
  * @author hongghe 2018/12/24

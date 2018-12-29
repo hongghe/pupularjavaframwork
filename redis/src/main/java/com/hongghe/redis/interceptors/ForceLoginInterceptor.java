@@ -20,7 +20,7 @@ public class ForceLoginInterceptor implements HandlerInterceptor {
      * Intercept the execution of a handler. Called after HandlerMapping determined
      * an appropriate handler object, but before HandlerAdapter invokes the handler.
      * <p>DispatcherServlet processes a handler in an execution chain, consisting
-     * of any number of interceptors, with the handler itself at the end.
+     * of any number of interceptor, with the handler itself at the end.
      * With this method, each interceptor can decide to abort the execution chain,
      * typically sending a HTTP error or writing a custom response.
      * <p><strong>Note:</strong> special considerations apply for asynchronous

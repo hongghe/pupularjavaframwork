@@ -1,4 +1,4 @@
-package com.hongghe.dubbo.components;
+package com.hongghe.dubbo.component;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
