@@ -3,6 +3,7 @@ package com.hongghe.redis;
 import com.zaxxer.hikari.HikariDataSource;
 import com.zaxxer.hikari.metrics.prometheus.PrometheusMetricsTrackerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
@@ -13,15 +14,15 @@ import javax.sql.DataSource;
  */
 public class RedisInitializer {
 
-
+    @Qualifier("dataSource")
     @Autowired
     private DataSource dataSource;
-
 
     @PostConstruct
     public void init() {
         if (this.dataSource instanceof HikariDataSource) {
-            ((HikariDataSource) this.dataSource).setMetricsTrackerFactory(new PrometheusMetricsTrackerFactory());
+            ((HikariDataSource)this.dataSource).setMetricsTrackerFactory(new PrometheusMetricsTrackerFactory());
         }
     }
+
 }

@@ -1,4 +1,4 @@
-package com.hongghe.mysql;
+package com.hongghe.rabbitmq;
 
 import com.zaxxer.hikari.HikariDataSource;
 import com.zaxxer.hikari.metrics.prometheus.PrometheusMetricsTrackerFactory;
@@ -8,9 +8,9 @@ import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 /**
- * @author hongghe 2018/12/28
+ * @author hongghe 2018/12/29
  */
-public class MysqlInitializer {
+public class RabbitmqInitializer {
 
     @Autowired
     private DataSource dataSource;
@@ -18,7 +18,8 @@ public class MysqlInitializer {
     @PostConstruct
     public void init() {
         if (this.dataSource instanceof HikariDataSource) {
-           ((HikariDataSource) this.dataSource).setMetricsTrackerFactory(new PrometheusMetricsTrackerFactory());
+            ((HikariDataSource) this.dataSource).setMetricsTrackerFactory(new PrometheusMetricsTrackerFactory());
         }
     }
+
 }
