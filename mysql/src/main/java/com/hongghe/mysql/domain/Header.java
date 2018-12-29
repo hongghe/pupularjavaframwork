@@ -7,7 +7,7 @@ import lombok.Data;
  * @author hongghe 2018/12/29
  */
 @Data
-@Builder(builderClassName = "Buider", toBuilder = true)
+@Builder(builderClassName = "Builder", toBuilder = true)
 public class Header {
 
     /**
