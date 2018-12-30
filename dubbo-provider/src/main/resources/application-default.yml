@@ -20,7 +20,7 @@ spring:
     protocol:     #协议配置，用于配置提供服务的协议信息，协议由提供方指定，消费方被动接受。
       name: dubbo
       port: 20880
-    scan: com.dubboProvide.dubboProvide.service  #服务暴露与发现消费所在的package
+    scan: com.hongghe.dubboProvider.service  #服务暴露与发现消费所在的package
 server:
   port: 8081
   servlet:
