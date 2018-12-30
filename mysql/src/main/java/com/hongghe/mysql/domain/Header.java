@@ -19,4 +19,16 @@ public class Header {
      * The user client ip address
      */
     private final String clientIp;
+
+    private final Long uuid;
+
+    private final String skey;
+
+    private final String ua;
+
+
+    private final Long channelId;
+
+    private final String source;
+
 }
