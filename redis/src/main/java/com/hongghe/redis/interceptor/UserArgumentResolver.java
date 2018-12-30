@@ -1,4 +1,4 @@
-package com.hongghe.redis.interceptors;
+package com.hongghe.redis.interceptor;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.Nullable;

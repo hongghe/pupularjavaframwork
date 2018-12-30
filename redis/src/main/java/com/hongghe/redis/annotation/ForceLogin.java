@@ -1,4 +1,4 @@
-package com.hongghe.redis.annotations;
+package com.hongghe.redis.annotation;
 
 import java.lang.annotation.*;
 

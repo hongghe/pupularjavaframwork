@@ -85,10 +85,10 @@ public class WebConfiguration implements WebMvcConfigurer {
     }
 
     /**
-     * Add Spring MVC lifecycle interceptors for pre- and post-processing of
+     * Add Spring MVC lifecycle interceptor for pre- and post-processing of
      * controller method invocations. Interceptors can be registered to apply
      * to all requests or be limited to a subset of URL patterns.
-     * <p><strong>Note</strong> that interceptors registered here only apply to
+     * <p><strong>Note</strong> that interceptor registered here only apply to
      * controllers and not to resource handler requests. To intercept requests for
      * static resources either declare a
      * {@link MappedInterceptor MappedInterceptor}

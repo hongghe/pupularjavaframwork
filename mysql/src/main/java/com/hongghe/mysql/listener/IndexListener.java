@@ -27,7 +27,7 @@ public class IndexListener implements ServletContextListener {
 
     /**
      * * Notification that the servlet context is about to be shut down. All
-     * servlets and filters have been destroy()ed before any
+     * servlets and filter have been destroy()ed before any
      * ServletContextListeners are notified of context destruction.
      * The default implementation is a NO-OP.
      *

@@ -1,4 +1,4 @@
-package com.hongghe.redis.interceptors;
+package com.hongghe.redis.interceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

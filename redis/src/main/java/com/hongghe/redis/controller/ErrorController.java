@@ -1,6 +1,6 @@
 package com.hongghe.redis.controller;
 
-import com.hongghe.redis.annotations.ForceLogin;
+import com.hongghe.redis.annotation.ForceLogin;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

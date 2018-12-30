@@ -1,6 +1,6 @@
-package com.hongghe.redis.interceptors;
+package com.hongghe.redis.interceptor;
 
-import com.hongghe.redis.annotations.ForceLogin;
+import com.hongghe.redis.annotation.ForceLogin;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.AsyncHandlerInterceptor;
 import org.springframework.web.servlet.HandlerInterceptor;

@@ -16,7 +16,7 @@ public class HeaderInterceptor implements HandlerInterceptor {
      * Intercept the execution of a handler. Called after HandlerMapping determined
      * an appropriate handler object, but before HandlerAdapter invokes the handler.
      * <p>DispatcherServlet processes a handler in an execution chain, consisting
-     * of any number of interceptors, with the handler itself at the end.
+     * of any number of interceptor, with the handler itself at the end.
      * With this method, each interceptor can decide to abort the execution chain,
      * typically sending a HTTP error or writing a custom response.
      * <p><strong>Note:</strong> special considerations apply for asynchronous
@@ -42,7 +42,7 @@ public class HeaderInterceptor implements HandlerInterceptor {
      * invoked the handler, but before the DispatcherServlet renders the view.
      * Can expose additional model objects to the view via the given ModelAndView.
      * <p>DispatcherServlet processes a handler in an execution chain, consisting
-     * of any number of interceptors, with the handler itself at the end.
+     * of any number of interceptor, with the handler itself at the end.
      * With this method, each interceptor can post-process an execution,
      * getting applied in inverse order of the execution chain.
      * <p><strong>Note:</strong> special considerations apply for asynchronous
