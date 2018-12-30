@@ -21,4 +21,5 @@ public class DubboInitializer {
             ((HikariDataSource) this.dataSource).setMetricsTrackerFactory(new PrometheusMetricsTrackerFactory());
         }
     }
+
 }

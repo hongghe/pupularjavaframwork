@@ -21,4 +21,5 @@ public class GrpcClientInitializer {
             ((HikariDataSource)this.dataSource).setMetricsTrackerFactory(new PrometheusMetricsTrackerFactory());
         }
     }
+
 }

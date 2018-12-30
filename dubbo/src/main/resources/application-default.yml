@@ -1,4 +1,5 @@
 spring:
+  application: "dubbo"
   profiles:
     active: 'default'
   datasource:
@@ -6,4 +7,6 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&useSSL=false&createDatabaseIfNotExist=true
     username: root
     password:
-dubbodmeo:
+dubbodemo:
+server:
+  port: 8080
