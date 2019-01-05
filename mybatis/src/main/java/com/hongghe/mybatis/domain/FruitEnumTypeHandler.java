@@ -11,25 +11,25 @@ import java.sql.SQLException;
 /**
  * @author: hongghe @date: 2019-01-05 10:23
  */
-public class FruitEnumTypeHandler implements TypeHandler {
+public class FruitEnumTypeHandler implements TypeHandler<Integer> {
 
     @Override
-    public void setParameter(PreparedStatement ps, int i, Object parameter, JdbcType jdbcType) throws SQLException {
+    public void setParameter(PreparedStatement ps, int i, Integer parameter, JdbcType jdbcType) throws SQLException {
 
     }
 
     @Override
-    public Object getResult(ResultSet rs, String columnName) throws SQLException {
+    public Integer getResult(ResultSet rs, String columnName) throws SQLException {
         return null;
     }
 
     @Override
-    public Object getResult(ResultSet rs, int columnIndex) throws SQLException {
+    public Integer getResult(ResultSet rs, int columnIndex) throws SQLException {
         return null;
     }
 
     @Override
-    public Object getResult(CallableStatement cs, int columnIndex) throws SQLException {
+    public Integer getResult(CallableStatement cs, int columnIndex) throws SQLException {
         return null;
     }
 }
