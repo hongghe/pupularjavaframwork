@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * The user login app.
+ *
  * @author hongghe 2018/12/28
  */
-@RestController
 @Slf4j
+@RestController
 @RequestMapping(value = "/v1/login")
 @Api(value = "Login", description = "user login")
 public class LoginController {
