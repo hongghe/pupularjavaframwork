@@ -69,6 +69,11 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>1.5.21</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -76,6 +81,45 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.github.kongchen</groupId>
+				<artifactId>swagger-maven-plugin</artifactId>
+				<version>3.1.7</version>
+				<configuration>
+					<apiSources>
+						<apiSource>
+							<springmvc>true</springmvc>
+							<locations>
+								<location>mysql</location>
+							</locations>
+							<schemes>
+								<scheme>http</scheme>
+							</schemes>
+							<host>localhost:8080</host>
+							<basePath>/</basePath>
+							<info>
+								<title>mysql-api</title>
+								<version>v1</version>
+								<contact>
+									<email>zhanghongheman@gmail.com</email>
+									<name>MysqlDB</name>
+								</contact>
+							</info>
+							<templatePath>classpath:/swagger/strapdown.html.hbs</templatePath>
+							<outputPath>${project.build.outputDirectory}/static/api.html</outputPath>
+							<swaggerDirectory>${project.build.outputDirectory}/static</swaggerDirectory>
+						</apiSource>
+					</apiSources>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
