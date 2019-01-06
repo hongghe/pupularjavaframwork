@@ -12,10 +12,8 @@ import javax.sql.DataSource;
  */
 public class MongodbInitializer {
 
-
     @Autowired
     private DataSource dataSource;
-
 
     @PostConstruct
     public void init() {

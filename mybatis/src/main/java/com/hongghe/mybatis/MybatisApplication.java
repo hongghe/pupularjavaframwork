@@ -19,7 +19,7 @@ public class MybatisApplication {
 	}
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext run = SpringApplication.run(MybatisApplication.class, args);
+		SpringApplication.run(MybatisApplication.class, args);
 	}
 
 }

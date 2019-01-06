@@ -7,5 +7,6 @@ spring:
     username: root
     password:
 mybatisdemo:
+
 mybatis:
   check-config-location: true
