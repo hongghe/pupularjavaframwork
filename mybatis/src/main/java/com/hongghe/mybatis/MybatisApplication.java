@@ -5,6 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * The startup class of application.
+ *
+ * @author hongghe
+ * @date 20190107
+ */
 @SpringBootApplication
 public class MybatisApplication {
 
