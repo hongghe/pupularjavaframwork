@@ -32,6 +32,9 @@
 		<module>kafka</module>
 		<module>mybatis</module>
 		<module>springbootweb</module>
+		<module>hibernate</module>
+		<module>apollo</module>
+		<module>zookeeper</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
