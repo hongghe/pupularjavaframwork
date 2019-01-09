@@ -9,8 +9,8 @@ import javax.persistence.*;
  */
 @Data
 @Entity
-@Table(name = "t_user")
-public class Tuser implements java.io.Serializable {
+@Table(name = "table_user")
+public class User implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
