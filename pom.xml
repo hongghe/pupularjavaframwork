@@ -37,6 +37,8 @@
 		<module>zookeeper</module>
 		<module>springmvc</module>
 		<module>elasticsearch</module>
+		<module>hadoop</module>
+		<module>spark</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
