@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(path = "/user")
 public class UserInformationController {
 
     @RequestMapping(value = "name")
     public String getUserName() {
-        log.info("user name");
+        log.error("user name");
         return "name";
     }
 }
