@@ -39,6 +39,7 @@
 		<module>elasticsearch</module>
 		<module>hadoop</module>
 		<module>spark</module>
+		<module>spring-cloud-alibaba</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
