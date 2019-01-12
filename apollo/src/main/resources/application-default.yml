@@ -1,1 +1,19 @@
+spring:
+  profiles:
+    active: 'default'
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    timeout: 1000
+server:
+  port: 8080
+  servlet:
+    context-path: /
 apollodemo:

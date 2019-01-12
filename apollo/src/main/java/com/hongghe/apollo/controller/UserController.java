@@ -23,8 +23,8 @@ public class UserController {
                 return false;
             case TEACHER:
                 return true;
-                default:
-                    return false;
+            default:
+                return false;
         }
     }
 }
