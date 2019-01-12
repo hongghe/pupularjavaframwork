@@ -1,7 +1,7 @@
 package com.hongghe.dubboconsumer;
 
+import com.hongghe.dubboconsumer.interceptor.LoginInterceptor;
 import com.hongghe.dubboconsumer.interceptor.UserInterceptor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.PathMatcher;
 import org.springframework.web.accept.ContentNegotiationManager;
@@ -16,9 +16,6 @@ import org.springframework.web.util.UrlPathHelper;
  */
 @Configuration
 public class DubboConsumerWebConfig extends WebMvcConfigurationSupport {
-
-    @Autowired
-    private UserInterceptor userInterceptor;
 
     /**
      * Return a {@link RequestMappingHandlerMapping} ordered at 0 for mapping
@@ -49,7 +46,8 @@ public class DubboConsumerWebConfig extends WebMvcConfigurationSupport {
      */
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(userInterceptor);
+        registry.addInterceptor(new UserInterceptor());
+        registry.addInterceptor(new LoginInterceptor());
         super.addInterceptors(registry);
     }
 
