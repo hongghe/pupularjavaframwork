@@ -1,35 +1,75 @@
 package com.hongghe.jpa.entity;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * @author: hongghe @date: 2019-01-09 16:13
  */
-@Data
 @Entity
-@Table(name = "table_user")
-public class User implements java.io.Serializable {
+@Table(name = "users")
+public class User {
 
-    private static final long serialVersionUID = 1L;
+    public User() {
+    }
+
+    public User(String username, String userpwd) {
+        this.username = username;
+        this.userpwd = userpwd;
+    }
+
+    private long userId;
+    private String username;
+    private String userpwd;
+
+    @JsonIgnore
+    private Set<Weibo> weibos;
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public long getUserId() {
+        return userId;
+    }
 
-    @Column(name = "username")
-    private String userName;
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
 
-    @Column(name = "password")
-    private String passWord;
+    @Column(name="username")
+    public String getUsername() {
+        return username;
+    }
 
-    @Column(name = "email")
-    private String email;
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-    @Column(name = "mobile")
-    private String mobile;
+    @Column(name = "userpwd")
+    public String getUserpwd() {
+        return userpwd;
+    }
 
-    @Column(name = "nickname")
-    private String nickName;
+    public void setUserpwd(String userpwd) {
+        this.userpwd = userpwd;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY,cascade = {CascadeType.REMOVE},mappedBy = "user")
+    public Set<Weibo> getWeibos() {
+        return weibos;
+    }
+
+    public void setWeibos(Set<Weibo> weibos) {
+        this.weibos = weibos;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
+                ", userpwd='" + userpwd + '\'' +
+                '}';
+    }
 }
