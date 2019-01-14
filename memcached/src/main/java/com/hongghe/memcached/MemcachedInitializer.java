@@ -15,7 +15,6 @@ public class MemcachedInitializer {
     @Autowired
     private DataSource dataSource;
 
-
     @PostConstruct
     public void init() {
         if (this.dataSource instanceof HikariDataSource) {

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 @RequestMapping(value = "/error")
-public class ErrorController {
+public class ExceptionController {
 
     @RequestMapping(value = "500")
     @ForceLogin
