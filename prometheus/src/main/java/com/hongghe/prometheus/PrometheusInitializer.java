@@ -1,4 +1,4 @@
-package com.hongghe.jpa;
+package com.hongghe.prometheus;
 
 import com.zaxxer.hikari.HikariDataSource;
 import com.zaxxer.hikari.metrics.prometheus.PrometheusMetricsTrackerFactory;
@@ -8,9 +8,9 @@ import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 /**
- * @author: hongghe @date: 2019-01-05 11:04
+ * @author: hongghe @date: 2019-01-14 16:01
  */
-public class JpaInitializer {
+public class PrometheusInitializer {
 
     @Autowired
     private DataSource dataSource;

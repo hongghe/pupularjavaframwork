@@ -24,6 +24,7 @@ public class Comment {
 
     private long commentId;
     private User user;
+
     @JsonIgnore
     private Weibo weibo;
     private String commentText;
