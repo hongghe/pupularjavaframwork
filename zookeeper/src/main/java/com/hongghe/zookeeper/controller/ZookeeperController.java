@@ -24,6 +24,13 @@ public class ZookeeperController {
             }
         };
 
+      new Watcher() {
+          @Override
+          public void process(WatchedEvent event) {
+              log.info("[getZookeeper]Event = {}", new Gson().toJson(event));
+          }
+      };
+
         String value = null;
         try {
             final ZooKeeper zookeeper = new ZooKeeper("127.0.0.1:2181", 1000000, watcher);
