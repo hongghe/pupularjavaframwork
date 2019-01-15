@@ -1,5 +1,6 @@
 package com.hongghe.prometheus;
 
+import com.hongghe.prometheus.interceptor.PrometheusInterceptor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -334,6 +335,7 @@ public class PrometheusWebConfiguration extends WebMvcConfigurationSupport {
      */
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new PrometheusInterceptor());
         super.addInterceptors(registry);
     }
 
