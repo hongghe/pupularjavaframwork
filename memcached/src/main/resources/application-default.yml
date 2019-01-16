@@ -7,6 +7,16 @@ spring:
     username: root
     password:
 memcacheddemo:
-  memcached:
+  memchachedConfiguration:
     ip: 127.0.0.1
     port: 11211
+#memcached缓存机制配置
+memcached:
+  servers: 127.0.0.1:11211
+  weights: 5
+  initConn: 20
+  minConn: 10
+  maxConn: 50
+  maintSleep: 3000
+  nagle: false
+  socketTO: 3000
