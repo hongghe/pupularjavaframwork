@@ -1,5 +1,6 @@
 package com.hongghe.dubboconsumer;
 
+import com.hongghe.dubboconsumer.domain.DubboHost;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -9,4 +10,5 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Data
 @ConfigurationProperties(prefix = "dubboconsumerdemo")
 public class DubboConsumerProperties {
+    private DubboHost dubboHost = new DubboHost();
 }
