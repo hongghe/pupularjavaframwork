@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebListener;
 @Slf4j
 @WebListener
 public class IndexListener implements ServletContextListener {
+
     /**
      * * Notification that the web application initialization process is starting.
      * All ServletContextListeners are notified of context initialization before
