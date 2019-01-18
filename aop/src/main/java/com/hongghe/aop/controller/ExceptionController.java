@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/exception")
 public class ExceptionController {
 
+    @RequestMapping(value = "404")
     public String notFound() {
         return "Sorry, Not Found!";
     }
