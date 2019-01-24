@@ -2,6 +2,7 @@ package com.hongghe.memcached.configuration;
 
 import com.whalin.MemCached.MemCachedClient;
 import com.whalin.MemCached.SockIOPool;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author: hongghe @date: 2019-01-16 15:41
  */
+@Slf4j
 @Component
 public class MemcachedConfig {
 
@@ -18,6 +20,7 @@ public class MemcachedConfig {
 
     @Bean
     public SockIOPool sockIOPool() {
+        log.info("socket io pool");
         //获取连接池的实例
         SockIOPool pool = SockIOPool.getInstance();
         //服务器列表及其权重

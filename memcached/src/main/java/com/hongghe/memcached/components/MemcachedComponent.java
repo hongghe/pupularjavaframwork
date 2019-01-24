@@ -1,10 +1,16 @@
 package com.hongghe.memcached.components;
 
-import org.springframework.context.annotation.Configuration;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 /**
  * @author: hongghe @date: 2019-01-14 20:47
  */
-@Configuration
+@Slf4j
+@Component
 public class MemcachedComponent {
+
+    public String setKey(String key) {
+        return null;
+    }
 }

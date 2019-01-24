@@ -5,10 +5,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author: hongghe @date: 2019-01-05 11:09
+ * @author: hongghe @date: 2019-01-24 19:28
  */
 @Slf4j
 @RestController
-@RequestMapping(path = "/exception")
-public class ExceptionController {
+@RequestMapping(path = "/welcome")
+public class WelcomeController {
+
+    @RequestMapping(value = "hello")
+    public String hello() {
+        return "hello";
+    }
 }

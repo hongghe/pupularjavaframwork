@@ -1,15 +1,15 @@
-package com.hongghe.memcached.domain;
+package com.hongghe.kafka.message;
 
 import lombok.Builder;
 import lombok.Data;
 
 /**
- * @author: hongghe @date: 2019-01-14 20:50
+ * @author: hongghe @date: 2019-01-24 19:36
  */
 @Data
 @Builder(builderClassName = "Builder", toBuilder = true)
-public class AdAgent {
+public class HelloRequest {
 
     @lombok.Builder.Default
-    private String id = "0";
+    private String message = "hello";
 }
