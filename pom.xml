@@ -41,6 +41,7 @@
 		<module>spark</module>
 		<module>spring-cloud-alibaba</module>
 		<module>aop</module>
+		<module>scala</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
