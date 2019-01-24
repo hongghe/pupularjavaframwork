@@ -6,6 +6,7 @@ import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -18,12 +19,17 @@ public class TimeUtils {
     /**
      * 日期的格式
      */
-    private static final String DATE_FORMATE = "yyyy-MM-dd HH:mm:ss";
+    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+
+    /**
+     * 日期的格式
+     */
+    private static final String SECOND_DATE_FORMAT = "yyyyMMdd HH:mm:ss";
 
     /**
      * 2019年01月13日12点12分12秒的格式
      */
-    private static final String CHINESE_DATE_FORMATE = "yyyy年MM月dd日 HH时mm分ss秒";
+    private static final String CHINESE_DATE_FORMAT = "yyyy年MM月dd日 HH时mm分ss秒";
 
     /**
      * <p>
@@ -33,8 +39,9 @@ public class TimeUtils {
      * @return 日期的字符串
      */
     public static String timestampToDate(Long timstamp) {
-        DateTime dateTime = new DateTime();
-        return null;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(SECOND_DATE_FORMAT);
+        DateTime dateTime = new DateTime(timstamp);
+        return simpleDateFormat.format(dateTime);
     }
 
     /**
@@ -44,16 +51,31 @@ public class TimeUtils {
      * </p>
      * @return 日期的字符串
      */
-    public static String timestampToChineseDate(Long timstamp) {
-        DateTime dateTime = new DateTime();
-        return null;
+    public static String timestampToChineseDate(Long timestamp) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(CHINESE_DATE_FORMAT);
+        DateTime dateTime = new DateTime(timestamp);
+        return simpleDateFormat.format(dateTime);
     }
+
+    /**
+     * <p>
+     *  <li>日期的格式</li>
+     * <code>2019-01-24 00:00:00 -> 2019年01月13日12点12分12秒的格式</code>
+     * </p>
+     * @return 日期的字符串
+     */
+    public static Long timestampToChineseDate(String dateFormat) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(DATE_FORMAT);
+        DateTime timestamp = DateTime.parse(dateFormat, dateTimeFormatter);
+        return timestamp.getMillis()/1000;
+    }
+
 
     /**
      * 10位时间戳
      * @return 10位时间戳格式
      */
-    public Long timestamp() {
+    public static Long timestamp() {
         return new DateTime().getMillis()/1000;
     }
 
@@ -61,7 +83,7 @@ public class TimeUtils {
      * 13位时间戳
      * @return 13位时间戳的格式
      */
-   public Long timestampMillis() {
+   public static Long timestampMillis() {
         return new DateTime().getMillis();
    }
 
@@ -77,7 +99,7 @@ public class TimeUtils {
         String str5 = dateTime.toString("MM/dd/yyyy HH:mm ZZZZ");
         String str6 = dateTime.toString("MM/dd/yyyy HH:mm Z");
 
-        DateTimeFormatter format = DateTimeFormat .forPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter format = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss");
         //时间解析
         DateTime dateTime2 = DateTime.parse("2012-12-21 23:22:45", format);
 
