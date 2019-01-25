@@ -42,6 +42,10 @@
 		<module>spring-cloud-alibaba</module>
 		<module>aop</module>
 		<module>scala</module>
+		<module>cassandra</module>
+        <module>aws</module>
+		<module>messaging</module>
+		<module>tracing</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
