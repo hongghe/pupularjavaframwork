@@ -87,6 +87,19 @@ public class TimeUtils {
         return new DateTime().getMillis();
    }
 
+   /**
+    * 13位时间戳
+    * @Param year 年
+    * @Param month 月
+    * @Param day 天
+    * @Param hout 小时
+    * @Param minute 分钟
+    * @Param second 秒
+    */
+   public static Long timestampMills(int year,int month,int day,int hour,int minute, int second) {
+       return new DateTime(year, month, day, minute, second).getMillis();
+   }
+
     public static void main(String[] args) {
        //初始化时间
         DateTime dateTime=new DateTime(2012, 12, 13, 18, 23,55);
