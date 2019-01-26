@@ -15,11 +15,17 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping(path = "/exception")
 public class ExceptionController {
 
+    /**
+     * The not found index.html
+     */
     @RequestMapping(value = "404")
     public String notFound(HttpServletRequest request, HttpServletResponse response) {
         return response.encodeRedirectURL("/404.html");
     }
 
+    /**
+     * The server error server.html
+     */
     @RequestMapping(value = "500")
     public String serverError(HttpServletRequest request, HttpServletResponse response) {
         return response.encodeRedirectURL("/500.html");

@@ -9,6 +9,14 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface LogAnnotation {
-    String value() default "日志";
+
+    /**
+     * Content of log.
+     */
+    String value() default "log";
+
+    /**
+     * The log action of user.
+     */
     String log();
 }

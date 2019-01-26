@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping(path = "/welcome")
 public class WelcomeController {
 
+    /**
+     * Greeting index of api.
+     */
     @RequestMapping(value = "greeting")
     public String greetingHello(HttpServletRequest requestm, HttpServletResponse response) {
         return response.encodeRedirectURL("/welcome.html");

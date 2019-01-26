@@ -12,7 +12,7 @@ public @interface AuthorizationAnnotation {
 
     /**
      * 注解定义
-     * @return
+     * @return 注释的结果信息
      */
     String value() default "注解";
 }

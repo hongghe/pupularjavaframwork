@@ -9,5 +9,7 @@ import lombok.Data;
 @Data
 @Builder(builderClassName = "Builder", toBuilder = true)
 public class AblibabaCloud {
+
+    /**Name of alibaba cloud. */
     private String name;
 }
