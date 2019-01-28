@@ -17,3 +17,6 @@ server:
   servlet:
     context-path: /
 apollodemo:
+adminproperties:
+  name: 'name'
+  age: 12
