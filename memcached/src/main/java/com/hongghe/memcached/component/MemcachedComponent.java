@@ -1,4 +1,4 @@
-package com.hongghe.memcached.components;
+package com.hongghe.memcached.component;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
