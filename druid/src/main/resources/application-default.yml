@@ -1,0 +1,12 @@
+spring:
+  application: "druid"
+  profiles:
+    active: 'default'
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password:
+server:
+  port: 8080

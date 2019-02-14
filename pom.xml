@@ -46,6 +46,7 @@
         <module>aws</module>
 		<module>messaging</module>
 		<module>tracing</module>
+		<module>druid</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
