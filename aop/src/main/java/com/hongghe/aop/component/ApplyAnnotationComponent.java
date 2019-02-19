@@ -12,6 +12,8 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 
 /**
+ * 用户的申请状态</p>
+ *
  * @author: hongghe @date: 2019-01-15 18:43
  */
 @Slf4j

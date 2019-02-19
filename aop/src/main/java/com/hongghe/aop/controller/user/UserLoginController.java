@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/user_login")
 public class UserLoginController {
 
+    /**
+     * <p>用户的登录</p>
+     * @return 登录的结果信息
+     */
     @RequestMapping(value = "login")
     public boolean login() {
         return false;
