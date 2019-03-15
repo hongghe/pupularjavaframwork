@@ -8,5 +8,5 @@ public interface ApplyService {
     /**
      * 提交申请信息
      */
-    boolean sunbmitApplyInfo();
+    boolean submitApplyInfo();
 }
