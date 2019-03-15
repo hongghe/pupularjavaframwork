@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@RequestMapping(value = "v1/risk_control_audit")
+@RequestMapping(path = "v1/risk_control_audit")
 public class RiskControlAuditController {
 }

@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@RequestMapping(value = "/v1/apply")
+@RequestMapping(path = "/v1/apply")
 public class UserApplyController {
 }

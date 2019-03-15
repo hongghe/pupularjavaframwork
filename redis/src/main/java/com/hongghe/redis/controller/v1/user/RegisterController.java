@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@RequestMapping(value = "/user/register")
+@RequestMapping(path = "/user/register")
 @Api(value = "Register", description = "user register")
 public class RegisterController {
 }

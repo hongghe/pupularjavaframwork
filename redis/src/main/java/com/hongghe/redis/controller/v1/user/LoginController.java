@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@RequestMapping(value = "/v1/login")
+@RequestMapping(path = "/v1/login")
 @Api(value = "Login", description = "user login")
 public class LoginController {
 
