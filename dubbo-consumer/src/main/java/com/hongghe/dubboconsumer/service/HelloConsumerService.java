@@ -21,6 +21,10 @@ public class HelloConsumerService {
     public void init() {
         helloService.sayHello();
     }
+
+    public String hello() {
+        return helloService.sayHello();
+    }
 }
 
 

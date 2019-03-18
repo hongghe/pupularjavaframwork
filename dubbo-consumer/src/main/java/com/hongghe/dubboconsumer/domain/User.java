@@ -9,6 +9,7 @@ import lombok.Data;
 @Data
 @Builder(builderClassName = "Builder", toBuilder = true)
 public class User {
-    private final String name;
-    private final Integer age;
+    private String name;
+    private int age;
+    private int id;
 }
