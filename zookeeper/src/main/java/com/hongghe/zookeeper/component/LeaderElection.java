@@ -12,12 +12,12 @@ import java.util.concurrent.Callable;
  */
 public class LeaderElection implements Callable<String> {
 
-    ZooKeeper zooKeeper;
-    String znodePath;
-    String name;
+    private ZooKeeper zooKeeper;
+    private String znodePath;
+    private String name;
 
-    String newNodeName = null;
-    boolean isLeader = false;
+    private String newNodeName = null;
+    private static boolean isLeader = false;
 
     LeaderElection(ZooKeeper zooKeeper, String znodePath, String name) {
         this.zooKeeper = zooKeeper;
