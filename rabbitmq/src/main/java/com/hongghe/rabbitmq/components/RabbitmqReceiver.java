@@ -13,7 +13,7 @@ public class RabbitmqReceiver {
 
     @RabbitHandler
     public void process(String hello) {
-        System.out.println("Receiver : " + hello);
+        System.out.println("receiver message : " + hello);
     }
 
 }
