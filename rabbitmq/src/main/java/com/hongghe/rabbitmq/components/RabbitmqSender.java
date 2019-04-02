@@ -19,7 +19,7 @@ public class RabbitmqSender {
 
     public void send() {
         String context = "hellomq " + new Date();
-        System.out.println("Sender : " + context);
+        System.out.println("send message : " + context);
         this.rabbitTemplate.convertAndSend("hellomq", context);
     }
 

@@ -2,19 +2,21 @@ package com.hongghe.redis.component.redis.lock;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
 /**
  * @author: hongghe @date: 2019-03-20 10:21
  */
-public class RedisLock {
+@Component
+public class RedisLockComponent {
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
 
-    RedisLock(StringRedisTemplate stringRedisTemplate) {
+    RedisLockComponent(StringRedisTemplate stringRedisTemplate) {
         this.stringRedisTemplate = stringRedisTemplate;
     }
 
