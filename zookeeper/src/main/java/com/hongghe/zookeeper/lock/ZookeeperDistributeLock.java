@@ -107,10 +107,8 @@ public class ZookeeperDistributeLock implements DistributedLock {
      * @throws Exception
      */
     private boolean waitToLock(long startMillis, Long millisToWait) throws Exception {
-
         boolean haveTheLock = false;
         boolean doDelete = false;
-
         try {
             while (!haveTheLock) {
                 logger.info("get Lock Begin");
