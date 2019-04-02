@@ -2,6 +2,7 @@ package com.hongghe.kafka.component;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Profile;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,4 +12,9 @@ import org.springframework.stereotype.Component;
 @Profile("kafka_user_action")
 @Component
 public class UserActionKafkaComponent {
+
+    @KafkaListener(topics = "")
+    public String handle(String context) {
+        return context;
+    }
 }
