@@ -25,16 +25,12 @@ public class ZookeeperDistributeLock implements DistributedLock {
         while (true) {
             try {
                 myLock.lock();
-                Thread.sleep(5000);
-
+                Thread.sleep(2000);
             } catch (Exception e) {
-
             } finally {
                 myLock.unLock();
             }
-
         }
-
     }
 
     private ZooKeeper zooKeeper;
@@ -246,10 +242,8 @@ public class ZookeeperDistributeLock implements DistributedLock {
         // 该方法实现获取locker节点下的所有顺序节点，并且从小到大排序,
         List<String> children = getSortedChildren();
         String sequenceNodeName = currentLockPath.substring(rootPath.length() + 1);
-
         // 计算刚才客户端创建的顺序节点在locker的所有子节点中排序位置，如果是排序为0，则表示获取到了锁
         int ourIndex = children.indexOf(sequenceNodeName);
-
         if (ourIndex < 0) {
             logger.error("not find node:{}", sequenceNodeName);
             throw new Exception("节点没有找到: " + sequenceNodeName);
@@ -273,7 +267,6 @@ public class ZookeeperDistributeLock implements DistributedLock {
         if (unit == null) {
             throw new Exception("TimeUnit can not be null");
         }
-
         return attemptLock(time, unit);
     }
 
@@ -282,9 +275,6 @@ public class ZookeeperDistributeLock implements DistributedLock {
             zooKeeper.delete(currentLockPath, -1);
         } catch (Exception e) {
             logger.error("unLock error", e);
-
         }
-
     }
-
 }

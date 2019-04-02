@@ -91,7 +91,6 @@ public abstract class BaseDistributedLock implements DistributedLock {
      *
      * @param startMillis
      * @param millisToWait
-     * @param ourPath
      * @return
      * @throws Exception
      */
