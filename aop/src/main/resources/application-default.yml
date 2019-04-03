@@ -1,8 +1,14 @@
-aopdemo:
-server:
-  port: 8080
-  servlet:
-    context-path: '/'
 spring:
-  application:
-    name: 'con.hongghe.aop'
+  profiles:
+    active: 'default'
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password:
+aopdemo:
+  swagger:
+    basePackage: com.hongghe.aop.controller
+    title: 用户服务
+    description: 用户基本增删改查
+    version: V1.0

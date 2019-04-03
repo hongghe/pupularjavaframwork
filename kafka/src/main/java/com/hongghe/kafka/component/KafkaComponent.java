@@ -13,6 +13,8 @@ import org.springframework.stereotype.Component;
 @Profile("default")
 public class KafkaComponent {
 
-/*    @KafkaListener(topics = "hello")
-    public String */
+   @KafkaListener(topics = "hello")
+    public String handle(String context) {
+       return context;
+   }
 }
