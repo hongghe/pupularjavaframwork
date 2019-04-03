@@ -16,7 +16,6 @@ public class SelfLogicAspect{
 
     @Before("LogPointCuts.pointCutController()")
     public void doSthBefore(JoinPoint joinpoint){
-        //自定义逻辑
         log.info("before method.");
     }
 
