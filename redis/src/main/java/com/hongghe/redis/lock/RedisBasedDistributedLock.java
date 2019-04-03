@@ -9,18 +9,15 @@ import java.util.concurrent.locks.Condition;
 import redis.clients.jedis.Jedis;
 
 /**
- * 基于Redis的SETNX操作实现的分布式锁
- *
+ * <p>基于Redis的SETNX操作实现的分布式锁</>
  * 获取锁时最好用lock(long time, TimeUnit unit), 以免网路问题而导致线程一直阻塞
  */
 public class RedisBasedDistributedLock extends AbstractLock {
 
     private Jedis jedis;
-
-    // 锁的名字
+    /** 锁的名字 */
     protected String lockKey;
-
-    // 锁的有效时长(毫秒)
+    /** 锁的有效时长(毫秒) */
     protected long lockExpires;
 
     public RedisBasedDistributedLock(Jedis jedis, String lockKey, long lockExpires) {
@@ -38,8 +35,7 @@ public class RedisBasedDistributedLock extends AbstractLock {
 
         System.out.println("test2");
         long start = System.currentTimeMillis();
-        long timeout = unit.toMillis(time); // if !useTimeout, then it's useless
-
+        long timeout = unit.toMillis(time);
         while (useTimeout ? isTimeout(start, timeout) : true) {
             System.out.println("test3");
             if (interrupt) {

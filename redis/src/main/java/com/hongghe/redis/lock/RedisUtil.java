@@ -18,10 +18,8 @@ import redis.clients.jedis.JedisPoolConfig;
 public class RedisUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RedisUtil.class);
-
     private static JedisPool pool = null;
-
-    private static RedisUtil ru = new RedisUtil();
+    private static RedisUtil redisUtil = new RedisUtil();
 
     public static void main(String[] args) {
         RedisUtil redisUtil = RedisUtil.getInstance();
@@ -53,7 +51,7 @@ public class RedisUtil {
     }
 
     public static RedisUtil getInstance() {
-        return ru;
+        return redisUtil;
     }
 
     /**
@@ -99,7 +97,6 @@ public class RedisUtil {
             jedis = pool.getResource();
             return jedis.set(key, value);
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
             return "0";
         } finally {
@@ -218,7 +215,6 @@ public class RedisUtil {
             jedis = pool.getResource();
             res = jedis.setex(key, seconds, value);
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
         } finally {
             returnResource(pool, jedis);

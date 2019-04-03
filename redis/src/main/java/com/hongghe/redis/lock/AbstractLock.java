@@ -36,7 +36,7 @@ public abstract class AbstractLock implements Lock {
 
     public boolean tryLock(long time, TimeUnit unit) {
         try {
-            System.out.println("ghggggggggggggg");
+            System.out.println("try to lock.");
             return lock(true, time, unit, false);
         } catch (InterruptedException e) {
             e.printStackTrace();

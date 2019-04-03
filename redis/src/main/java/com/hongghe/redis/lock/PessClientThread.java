@@ -9,6 +9,7 @@ import redis.clients.jedis.Jedis;
 import java.util.concurrent.TimeUnit;
 
 public class PessClientThread implements Runnable {
+
     String key = "prdNum";// 商品主键
     String clientList = "clientList";// // 抢购到商品的顾客列表主键
     String clientName;
