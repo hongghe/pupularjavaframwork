@@ -20,7 +20,13 @@ public class ZookeeperDistributeLock implements DistributedLock {
     private static Logger logger = LoggerFactory.getLogger(ZookeeperDistributeLock.class);
 
     public static void main(String[] args) throws IOException {
-        ZooKeeper zooKeeper = new ZooKeeper("127.0.0.1:2181", 60000, null);
+        ZooKeeper zooKeeper = new ZooKeeper("127.0.0.1:2181", 60000, new Watcher() {
+            @Override
+            public void process(WatchedEvent event) {
+                logger.info("receive event :" + event.getType().name());
+            }
+        });
+
         ZookeeperDistributeLock myLock = new ZookeeperDistributeLock(zooKeeper, "/test", "lock-");
         while (true) {
             try {
