@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @PropertySource("classpath:application-default.properties")
-@ConfigurationProperties(prefix = "jdademo")
+@ConfigurationProperties(prefix = "jpademo")
 public class JpaProperties {
 }

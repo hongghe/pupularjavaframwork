@@ -12,9 +12,6 @@ import javax.persistence.*;
 @Table(name = "t_user")
 public class Animal implements java.io.Serializable {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     @Id

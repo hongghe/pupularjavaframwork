@@ -1,14 +1,14 @@
 package com.hongghe.jpa;
 
-import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableAsync
-@EnableSwagger2Doc
+@EnableSwagger2
 @ServletComponentScan
 @SpringBootApplication
 public class JpaApplication {
@@ -16,11 +16,6 @@ public class JpaApplication {
 	@Bean
 	public JpaInitializer jpaInitializer() {
 		return new JpaInitializer();
-	}
-
-	@Bean
-	public JpaProperties jpaProperties() {
-		return new JpaProperties();
 	}
 
 	public static void main(String[] args) {
